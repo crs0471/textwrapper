@@ -1,0 +1,45 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(224, 219, 219, 0.616);
+    width: 100vw;
+}
+nav{
+    width: 100vw;
+    padding: 0px;
+    margin: 0px;
+}
+.username{
+    color: whitesmoke;
+}
+.btn-secondary{
+    width: 80px;
+}
+.container{
+    background-color: white;
+    padding-top: 20px;
+}
+.start-text{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.check{
+    margin-left: auto;
+    transform: scale(1.2);
+}
+.output{
+    padding-bottom: 30px;
+}
+.footer{
+    color: rgba(199, 199, 199, 0.712);
+    padding: 10px;
+}
+.ta-c{
+    text-align: center;
+}
+
+

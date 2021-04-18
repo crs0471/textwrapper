@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regester</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="regester.css">
+</head>
+<body>
+    <?php
+        include('./database.php');
+        if ($_GET['regrq']=='tr') {
+            $insertion = insert_user(connection(),$_POST['reg-username'],$_POST['reg-pass']);
+            echo $insertion;
+            if ($insertion) {
+                header("location:./index.php");
+            }
+        }
+    ?>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="./">TextWrapper</a>
+    </nav>
+    <div class="cont-box">
+    <h1>Regester</h1>
+    <form action="?regrq=tr" method="post">
+        <input class="form-control" type="text" name='reg-username' placeholder="Enter your username">
+        <br>
+        <input class="form-control" type="password" name="reg-pass" placeholder="Enter your password">
+        <br>
+        <input class="btn btn-danger" type="submit" value="Regester">
+        <a class="btn btn-secondary" href="./login.php">Login</a>
+    </form>
+    </div>
+
+    <div class="row  bg-dark footer">
+        <div class="col-md-6 ta-c">
+            Copyrights@cherishpatel2001@gmail.com <br>
+            Open For contribute for anyone
+            <br><br>
+            Contect me :
+            <br> <i> cherishpatel2001@gmail.com 
+                <br>8200314290</i>
+
+        </div>
+        <div class="col-md-6 ta-c">
+            A website where you can easily utilize your text .<br>
+            if your text is not longer than 100 charectars<br> you dont even have to signup.
+            <br><h1>TextWrapper</h1>
+        </div>
+
+    </div>
+</body>
+</html>
